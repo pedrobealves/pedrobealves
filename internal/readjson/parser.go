@@ -7,9 +7,10 @@ import (
 	"os"
 )
 
-func Create(data interface{}) (interface{}, error) {
+func Create(fileName string, data interface{}) (interface{}, error) {
 	// Open the file
-	file, err := os.Open("data.json")
+	file, err := os.Open(fileName)
+
 	if err != nil {
 		fmt.Println("Error opening the file:", err)
 		return nil, err

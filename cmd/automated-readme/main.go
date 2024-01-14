@@ -20,11 +20,21 @@ type Data struct {
 }
 
 func main() {
+
+	dir, err := os.Getwd()
+
+	if err != nil {
+		panic(err)
+	}
+
+	rootDir := filepath.Join(dir, "..", "..")
+
 	// Create an instance of your struct
-	module := models.Profile{}
+	profile := models.Profile{}
 
 	// Call the Create function with the struct instance
-	result, err := readjson.Create(&module)
+	result, err := readjson.Create(filepath.Join(rootDir, "data.json"), &profile)
+
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
@@ -46,7 +56,8 @@ func main() {
 	//fmt.Println("Stats:", replacers.ReplaceStats(resultModule))
 	// Ler o conteúdo do arquivo README_TEMPLATE.md
 	// Abrir o arquivo README_TEMPLATE.md
-	file, err := os.Open("README_TEMPLATE.md")
+
+	file, err := os.Open(filepath.Join(rootDir, "README_TEMPLATE.md"))
 	if err != nil {
 		panic(err)
 	}
@@ -78,16 +89,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-	// Obtenha o diretório atual onde o main.go está localizado
-	dir, err := os.Getwd()
-	if err != nil {
-		panic(err)
-	}
-
-	// Construa o caminho para a raiz do projeto
-	// Neste exemplo, assumimos que a raiz do projeto está dois níveis acima do diretório atual
-	rootDir := filepath.Join(dir, "..", "..")
 
 	// Construa o caminho para o arquivo que você deseja escrever na raiz do projeto
 	filePath := filepath.Join(rootDir, "README.md")

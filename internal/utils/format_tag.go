@@ -2,7 +2,7 @@ package utils
 
 import (
 	"bytes"
-	"html/template"
+	"text/template"
 )
 
 // ElementData é a estrutura para armazenar dados do elemento HTML.
@@ -14,7 +14,7 @@ type ElementData struct {
 
 // generateElementString gera a string do elemento HTML com base nos parâmetros fornecidos.
 func generateElementString(data ElementData) string {
-	tmpl, err := template.New("element").Parse(`<{{.Tag}} {{range $key, $value := .Properties}} {{$key}}="{{$value}}"{{end}}{{if .Children}}>{{.Children}}</{{.Tag}}>{{else}}/>{{end}}`)
+	tmpl, err := template.New("element").Parse(`<{{.Tag}}{{range $key, $value := .Properties}} {{$key}}="{{$value}}"{{end}}{{if .Children}}>{{.Children}}</{{.Tag}}>{{else}}/>{{end}}`)
 	if err != nil {
 		panic(err)
 	}

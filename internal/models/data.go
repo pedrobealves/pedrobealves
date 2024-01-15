@@ -91,3 +91,8 @@ type Profile struct {
 	SocialMedias       SocialMedias `json:"socialMedias"`
 	GithubStats        GithubStats  `json:"githubStats"`
 }
+
+type Data struct {
+	GithubStats string
+	AboutMe     string
+}

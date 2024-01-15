@@ -1,1 +1,7 @@
-{{.Name}}
+## **About me:**
+
+{{.AboutMe}}
+
+<hr>
+
+{{.GithubStats}}

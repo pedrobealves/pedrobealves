@@ -9,8 +9,11 @@ import (
 )
 
 // getFieldName converte o nome do campo para snake_case.
-func getFieldName(fieldName string) string {
-	return strcase.ToSnake(fieldName)
+func getFieldName(fieldName string, isSnakeCase bool) string {
+	if isSnakeCase {
+		return strcase.ToSnake(fieldName)
+	}
+	return strcase.ToLowerCamel(fieldName)
 }
 
 // normalizeFieldValue normaliza o valor do campo, especialmente se o nome do campo contiver "color".
@@ -22,14 +25,14 @@ func normalizeFieldValue(fieldName, fieldValue string) string {
 }
 
 // queryFromObject realiza a iteração sobre os campos da estrutura e formata os dados para uma string de consulta.
-func queryFromObject(val reflect.Value) string {
+func queryFromObject(val reflect.Value, isSnakeCase bool) string {
 	var result []string
 
 	typ := val.Type()
 
 	for i := 0; i < val.NumField(); i++ {
 		field := val.Field(i)
-		fieldName := getFieldName(typ.Field(i).Name)
+		fieldName := getFieldName(typ.Field(i).Name, isSnakeCase)
 		fieldValue := fmt.Sprintf("%v", field.Interface())
 		fieldValue = normalizeFieldValue(fieldName, fieldValue)
 
@@ -40,9 +43,9 @@ func queryFromObject(val reflect.Value) string {
 }
 
 // QueryFromObject gera e retorna uma string de consulta a partir dos campos de uma estrutura.
-func QueryFromObject(properties interface{}) string {
+func QueryFromObject(properties interface{}, isSnakeCase bool) string {
 	val := reflect.ValueOf(properties)
-	return queryFromObject(val)
+	return queryFromObject(val, isSnakeCase)
 }
 
 func NormalizeColor(color string) string {

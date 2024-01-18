@@ -9,7 +9,9 @@ import (
 
 func ReplaceStats(data *models.Profile) string {
 
-	result := utils.QueryFromObject(data.GithubStats.Styles)
+	mapColors(&data.GithubStats.Styles, "BgColor", "TitleColor", "TextColor", "BorderColor", "IconColor")
+
+	result := utils.QueryFromObject(data.GithubStats.Styles, true)
 
 	query := fmt.Sprintf("https://github-readme-stats.vercel.app/api/?username=pedrobealves&%s", result)
 

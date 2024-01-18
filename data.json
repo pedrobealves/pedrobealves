@@ -1,0 +1,119 @@
+{
+  "user": "pedrobealves",
+  "startedProgramming": "2010",
+  "repoQuantity": 6,
+  "header": {
+    "styles": {
+      "align": "center",
+      "style": "for-the-badge",
+      "color": "lightSecondary",
+      "logoColor": "white"
+    },
+    "image": {
+      "src": "",
+      "width": 600
+    },
+    "description": "FullStack Developer",
+    "badges": [
+      {
+        "type": "badge",
+        "name": "twitter",
+        "href": "https://twitter.com/pedrobealves"
+      },
+      {
+        "type": "badge",
+        "name": "linkedin",
+        "href": "https://linkedin.com/in/pedro-bernardi-alves"
+      },
+      {
+        "type": "views"
+      }
+    ]
+  },
+  "aboutme": {
+    "list": ["* Pedro Bernardi", "* Full Stack Developer"]
+  },
+  "skillswall": {
+    "styles": {
+      "style": "for-the-badge",
+      "align": "left",
+      "highlightColor": "primary",
+      "wallColors": ["secondary", "lightSecondary"],
+      "logoColor": "white"
+    },
+    "randomOrder": true,
+    "skills": [
+      { "name": "Next.js", "isHighlighted": true },
+      { "name": "SpringBoot", "isHighlighted": true },
+      { "name": ".NET", "isHighlighted": true },
+      { "name": "Angular", "isHighlighted": true },
+      { "name": "Rust", "isHighlighted": true },
+      { "name": "C++", "logo": "cplusplus", "isHighlighted": true },
+      { "name": "C" },
+      { "name": "Lua" },
+      { "name": "Go", "isHighlighted": true },
+      { "name": "JavaScript" },
+      { "name": "Python" },
+      { "name": "ShellScript", "logo": "gnu-bash" },
+      { "name": "React" },
+      { "name": "GraphQL" },
+      { "name": "Bootstrap" },
+      { "name": "Node.JS", "isHighlighted": true },
+      { "name": "Jest" },
+      { "name": "Sanity" },
+      { "name": "Express.js", "logo": "express" },
+      { "name": "TailwindCSS" },
+      { "name": "Firebase" },
+      { "name": "MongoDB" },
+      { "name": "SQLite" },
+      { "name": "TypeScript" },
+      { "name": "Figma" },
+      { "name": "Docker" }
+    ]
+  },
+  "recentworks": {
+    "styles": {
+      "title_color": "primary",
+      "text_color": "white",
+      "bg_color": "secondary",
+      "border_color": "black",
+      "icon_color": "white"
+    }
+  },
+  "socialMedias": {
+    "styles": {
+      "align": "left",
+      "style": "for-the-badge",
+      "color": "lightSecondary",
+      "logoColor": "white"
+    },
+    "links": [
+      {
+        "name": "twitter",
+        "href": "https://twitter.com/pedrobealves"
+      },
+      {
+        "name": "linkedin",
+        "href": "https://linkedin.com/in/pedro-bernardi-alves"
+      },
+      {
+        "name": "email",
+        "logo": "gmail",
+        "href": "mailto:pedrobealves@gmail.com"
+      }
+    ]
+  },
+  "githubStats": {
+    "styles": {
+      "style": "for-the-badge",
+      "align": "center",
+      "title_color": "primary",
+      "text_color": "white",
+      "bg_color": "secondary",
+      "border_color": "black",
+      "show_icons": true,
+      "icon_color": "white",
+      "rank_icon": "github"
+    }
+  }
+}

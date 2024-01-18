@@ -36,6 +36,7 @@ type SkillsWall struct {
 		Align          string   `json:"align"`
 		HighlightColor string   `json:"highlightColor"`
 		WallColors     []string `json:"wallColors"`
+		LogoColor      string   `json:"logoColor"`
 	} `json:"styles"`
 	RandomOrder bool     `json:"randomOrder"`
 	Skills      []Skills `json:"skills"`
@@ -92,7 +93,18 @@ type Profile struct {
 	GithubStats        GithubStats  `json:"githubStats"`
 }
 
+type Theme struct {
+	Colors struct {
+		Primary        string `json:"primary"`
+		Secondary      string `json:"secondary"`
+		LightSecondary string `json:"lightSecondary"`
+		Black          string `json:"black"`
+		White          string `json:"white"`
+	} `json:"colors"`
+}
+
 type Data struct {
 	GithubStats string
 	AboutMe     string
+	Skills      string
 }

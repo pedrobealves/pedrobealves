@@ -12,7 +12,6 @@ func decodeJSON(fileData []byte, data interface{}) (interface{}, error) {
 		fmt.Println("Error decoding JSON:", err)
 		return nil, err
 	}
-	fmt.Println("Structure of the defined struct.")
 	return data, nil
 }
 

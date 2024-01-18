@@ -36,17 +36,18 @@ func main() {
 		return
 	}
 
+	// Criar um objeto Data com os valores de substituição
+	data := models.Data{
+		AboutMe:     replacers.ReplaceAbout(resultModule),
+		GithubStats: replacers.ReplaceStats(resultModule),
+		Skills:      replacers.ReplaceSkills(resultModule),
+	}
+
 	fileTemplate, err := file.OpenReadFile("README_TEMPLATE.md")
 
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
-	}
-
-	// Criar um objeto Data com os valores de substituição
-	data := models.Data{
-		AboutMe:     replacers.ReplaceAbout(resultModule),
-		GithubStats: replacers.ReplaceStats(resultModule),
 	}
 
 	// Criar um novo template com a sintaxe esperada

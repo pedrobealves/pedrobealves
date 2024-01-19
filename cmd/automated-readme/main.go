@@ -11,9 +11,7 @@ import (
 
 func main() {
 
-	file := utils.NewFile()
-
-	fileData, err := file.OpenReadFile("data.json")
+	fileData, err := utils.OpenReadFile("data.json")
 
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -43,7 +41,7 @@ func main() {
 		Skills:      replacers.ReplaceSkills(resultModule),
 	}
 
-	fileTemplate, err := file.OpenReadFile("README_TEMPLATE.md")
+	fileTemplate, err := utils.OpenReadFile("README_TEMPLATE.md")
 
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -64,10 +62,10 @@ func main() {
 	}
 
 	// Construa o caminho para o arquivo que você deseja escrever na raiz do projeto
-	filePath := file.JoinFile("README.md")
+	filePath := utils.JoinFile("README.md")
 
 	// Escrever o conteúdo atualizado no arquivo README.md
-	err = file.WriteFile(filePath, updatedMd.String())
+	err = utils.WriteFile(filePath, updatedMd.String())
 	if err != nil {
 		panic(err)
 	}

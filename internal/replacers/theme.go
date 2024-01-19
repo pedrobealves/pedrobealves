@@ -14,9 +14,7 @@ var Colors = map[string]string{}
 
 func init() {
 
-	file := utils.NewFile()
-
-	fileData, err := file.OpenReadFile("theme.json")
+	fileData, err := utils.OpenReadFile("theme.json")
 
 	if err != nil {
 		fmt.Println("Error:", err)

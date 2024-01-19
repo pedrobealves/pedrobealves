@@ -49,6 +49,8 @@
       { "name": "Angular", "isHighlighted": true },
       { "name": "Rust", "isHighlighted": true },
       { "name": "C++", "logo": "cplusplus", "isHighlighted": true },
+      { "name": "Solid" },
+      { "name": "PLSQL", "logo": "postgresql" },
       { "name": "C" },
       { "name": "Lua" },
       { "name": "Go", "isHighlighted": true },

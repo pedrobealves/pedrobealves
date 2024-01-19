@@ -52,6 +52,8 @@
       { "name": "Solid" },
       { "name": "PLSQL", "logo": "postgresql" },
       { "name": "C" },
+      { "name": "WebAssembly", "isHighlighted": true },
+      { "name": "Tauri" },
       { "name": "Lua" },
       { "name": "Go", "isHighlighted": true },
       { "name": "JavaScript" },
